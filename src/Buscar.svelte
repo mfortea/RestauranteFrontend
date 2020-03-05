@@ -16,6 +16,14 @@
   input:hover {
     background-color: #e6e6e6;
   }
+
+  @media screen and (max-width: 700px) {
+    input {
+      text-align: center;
+      margin: 0 auto;
+      width: -webkit-fill-available;
+    }
+  }
 </style>
 
 <label>

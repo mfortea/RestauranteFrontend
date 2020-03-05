@@ -128,13 +128,7 @@
   .btn-eliminar:hover {
     background: #ff0800;
   }
-  @media (max-width: 500px) {
-    .btn-insertar::after,
-    .btn-modificar::after,
-    .btn-eliminar::after {
-      content: none;
-    }
-  }
+
 </style>
 
 <button class={clases} on:click={handler} />

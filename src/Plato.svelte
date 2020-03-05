@@ -49,6 +49,12 @@
   input:focus:invalid {
     background-color: rgb(255, 1, 39);
   }
+
+   @media screen and (max-width: 700px) {
+     .card {
+       width: auto;
+     }
+  }
 </style>
 
 <div class="card">

@@ -39,6 +39,15 @@
   span {
     margin-left: 60px;
   }
+
+  @media screen and (max-width: 700px) {
+    h2 {
+      text-align: center;
+    }
+    .container {
+      display: block;
+    }
+  }
 </style>
 
 <h1>

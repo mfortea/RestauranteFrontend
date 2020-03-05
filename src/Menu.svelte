@@ -8,7 +8,6 @@
     border-radius: 2px;
     padding: 8px;
     position: sticky;
-  
   }
   img {
     float: left;
@@ -48,6 +47,30 @@
 
   .texto-menu {
     color: rgb(255, 255, 255);
+  }
+
+  @media screen and (max-width: 700px) {
+    img {
+      margin: 0 auto;
+    }
+
+    p {
+      text-align: center;
+      display: block;
+    }
+
+    ul {
+      display: block;
+      padding: 0px;
+    }
+
+    .elemento-menu {
+      width: auto;
+      border-radius: 0px;
+      border-color: grey;
+      border-style: solid;
+      border-width: 2px;
+    }
   }
 </style>
 

@@ -49,6 +49,13 @@
   input:focus:invalid {
     background-color: rgb(255, 1, 39);
   }
+
+  @media screen and (max-width: 700px) {
+    .card {
+      width: auto;
+    }
+  }
+  
 </style>
 
 <div class="card">
@@ -58,7 +65,10 @@
     placeholder="Nombre del cocinero"
     class="title" />
   <br />
-  <input bind:value={cocinero.apellidos} placeholder="Apellidos" class="title" />
+  <input
+    bind:value={cocinero.apellidos}
+    placeholder="Apellidos"
+    class="title" />
   <br />
   <input
     bind:value={cocinero.edad}
@@ -68,6 +78,9 @@
     placeholder="Edad" />
   años
   <br />
-   <input bind:value={cocinero.especialidad} placeholder="Especialidad" class="title" />
+  <input
+    bind:value={cocinero.especialidad}
+    placeholder="Especialidad"
+    class="title" />
   <slot />
 </div>
