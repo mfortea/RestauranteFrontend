@@ -31,30 +31,43 @@
     justify-content: left;
     flex-wrap: wrap;
   }
+
+  img {
+    position: absolute;
+  }
+
+  span{
+    margin-left: 60px;
+  }
+
 </style>
 
-<h1>Platos</h1>
+<h1>
+  <img alt="Icono platos" width="50px" src="/platos.png" />
+  <span>Platos</span>
+</h1>
 <Buscar bind:busqueda />
 
+<br />
+
+<h2>Añadir un nuevo plato</h2>
 <div>
   <Plato bind:plato>
-  <h2>Insertar nuevos platos</h2>
-  <Boton documento={plato} tipo="insertar" coleccion="platos" />
+    <br />
+    <br />
+    <Boton documento={plato} tipo="insertar" coleccion="platos" />
   </Plato>
 </div>
 
-<br/>
+<br />
 
 <h2>Lista de platos</h2>
 <div class="container">
   {#each datos as plato}
     <Plato {plato}>
       <div style="text-align: left">
-        <h1>{plato.nombre}</h1>
-        <h2>{plato.tipo} | {plato.precio}€</h2>
-        <p>Preparado en {plato.minutosElaboracion} minutos</p>
-          <Boton documento={plato} tipo="modificar" coleccion="platos" />
-          <Boton documento={plato} tipo="eliminar" coleccion="platos" />
+        <Boton documento={plato} tipo="modificar" coleccion="platos" />
+        <Boton documento={plato} tipo="eliminar" coleccion="platos" />
       </div>
     </Plato>
   {/each}

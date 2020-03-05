@@ -1,5 +1,5 @@
 <script>
-  export let plato = {};
+  export let cocinero = {};
 </script>
 
 <style>
@@ -54,27 +54,20 @@
 <div class="card">
   <br />
   <input
-    bind:value={plato.nombre}
-    placeholder="Nombre del plato"
+    bind:value={cocinero.nombre}
+    placeholder="Nombre del cocinero"
     class="title" />
   <br />
-  <input bind:value={plato.tipo} placeholder="Tipo de plato" class="title" />
+  <input bind:value={cocinero.apellidos} placeholder="Apellidos" class="title" />
   <br />
   <input
-    bind:value={plato.minutosElaboracion}
+    bind:value={cocinero.edad}
     type="number"
-    min="1"
-    max="9999"
-    placeholder="Tiempo" />
-  minuto/s
+    min="18"
+    max="199"
+    placeholder="Edad" />
+  años
   <br />
-  <input
-    placeholder="Precio"
-    type="number"
-    min="0"
-    max="9999.99"
-    step=".01"
-    bind:value={plato.precio} />
-  €
+   <input bind:value={cocinero.especialidad} placeholder="Especialidad" class="title" />
   <slot />
 </div>

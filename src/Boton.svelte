@@ -88,11 +88,10 @@
     padding: 10px;
     cursor: pointer;
     border-radius: 8px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s linear;
+    border-style: none;
   }
-  .btn:hover {
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2)
-  }
+
   /* Botón para insertar */
   .btn-insertar {
     color: #094101;
@@ -102,12 +101,12 @@
     content: " Insertar";
   }
   .btn-insertar:hover {
-    background: #04c41e;
+    background: #03d11e;
   }
 
   /* Botón para modificar */
   .btn-modificar {
-    color: #742c05;
+    color: #000000;
     background-color: rgb(255, 120, 1);
   }
 
@@ -120,8 +119,8 @@
 
   /* Botón para eliminar */
   .btn-eliminar {
-    color: #3a0207;
-    background-color: rgb(204, 14, 14);
+    color: #000000;
+    background-color: rgb(223, 14, 14);
   }
   .btn-eliminar::after {
     content: " Eliminar";

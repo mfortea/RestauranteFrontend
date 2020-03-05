@@ -4,10 +4,11 @@
 
 <style>
   nav {
-    background-color: rgb(65, 65, 65);
-    border-radius: 10px;
+    background-color: rgb(71, 71, 71);
+    border-radius: 2px;
     padding: 8px;
-    box-shadow: -5px 5px 30px 0px rgba(0, 0, 0, 0.75);
+    position: sticky;
+  
   }
   img {
     float: left;
@@ -40,7 +41,7 @@
   }
 
   .elemento-menu:hover {
-    background-color: rgb(14, 14, 14);
+    background-color: rgb(175, 85, 0);
     transition-duration: 0.2s;
     transition-timing-function: linear;
   }

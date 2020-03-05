@@ -3,12 +3,21 @@
 </script>
 
 <style>
-  input{
+  input {
     border-radius: 8px;
+    background-color: #d3d3d3;
+    transition-duration: 0.2s;
+    border-color: rgb(160, 160, 160);
+    border-style: solid;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  input:hover {
+    background-color: #e6e6e6;
   }
 </style>
 
 <label>
-  Buscar &nbsp;
-  <input bind:value={busqueda} type="search" />
+  <input bind:value={busqueda} placeholder="🔎 Buscar" type="search" />
 </label>
