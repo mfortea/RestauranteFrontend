@@ -8,7 +8,6 @@ Este frontend se ha desarrollado utilizando el compilador/framework Svelte. Esta
 Este frontend está alojado en la siguiente dirección: https://restaurantefrontend.now.sh/
 
 ![Captura de la app instalada en macOS](assets/captura-inicio.png)
-
-<div style="text-align:center;">
-<img alt="Captura de la app instalada en Android" width="300px" src="assets/captura-android.jpg"> 
-</div>
+<p align="center">
+  <img alt="Captura de la app instalada en Android" width="300px" src="assets/captura-android.jpg"> 
+</p>
