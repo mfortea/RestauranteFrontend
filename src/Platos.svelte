@@ -47,6 +47,9 @@
     .container {
       display: block;
     }
+    img {
+
+    }
   }
 </style>
 
