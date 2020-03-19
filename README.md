@@ -9,6 +9,5 @@ Este frontend está alojado en la siguiente dirección: https://restaurantefront
 
 ![Captura de la app instalada en macOS](assets/captura-inicio.png)
 
-<div style="text-align:center;">
-<img alt="Captura de la app instalada en Android" width="300px" src="assets/captura-android.jpg"> 
-</div>
+<img style="text-align:center;" alt="Captura de la app instalada en Android" width="300px" src="assets/captura-android.jpg"> 
+

@@ -12,9 +12,11 @@
   let plato = {};
 
   onMount(async () => {
+    document.getElementById("cargando").innerHTML = "Cargando datos...";
     const response = await fetch(URL.platos);
     const data = await response.json();
     $jsonData = data;
+    document.getElementById("cargando").innerHTML = "";
   });
 
   $: regex = new RegExp(busqueda, "i");
@@ -32,6 +34,26 @@
     flex-wrap: wrap;
   }
 
+  h3 {
+    color: rgb(103, 103, 103);
+    animation-name: animacion-cargando;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier();
+  }
+
+  @keyframes animacion-cargando {
+    from {
+      color: rgb(103, 103, 103);
+    }
+    50% {
+      color: rgb(194, 94, 1);
+    }
+    to {
+      color: rgb(103, 103, 103);
+    }
+  }
+
   img {
     position: absolute;
   }
@@ -44,11 +66,13 @@
     h2 {
       text-align: center;
     }
+    h3 {
+      text-align: center;
+    }
     .container {
       display: block;
     }
     img {
-
     }
   }
 </style>
@@ -74,6 +98,7 @@
 
 <h2>Lista de platos</h2>
 <div class="container">
+  <h3 id="cargando" />
   {#each datos as plato}
     <Plato {plato}>
       <div style="text-align: left">

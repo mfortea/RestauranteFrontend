@@ -12,9 +12,11 @@
   let cocinero = {};
 
   onMount(async () => {
+    document.getElementById("cargando").innerHTML = "Cargando datos...";
     const response = await fetch(URL.cocineros);
     const data = await response.json();
     $jsonData = data;
+    document.getElementById("cargando").innerHTML = "";
   });
 
   $: regex = new RegExp(busqueda, "i");
@@ -40,8 +42,27 @@
     margin-left: 60px;
   }
 
-  @media screen and (max-width: 700px) {
+  h3 {
+    color: rgb(103, 103, 103);
+    animation-name: animacion-cargando;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier();
+  }
 
+  @keyframes animacion-cargando {
+    from {
+      color: rgb(103, 103, 103);
+    }
+    50% {
+      color: rgb(194, 94, 1);
+    }
+    to {
+      color: rgb(103, 103, 103);
+    }
+  }
+
+  @media screen and (max-width: 700px) {
     h2 {
       text-align: center;
     }
@@ -72,6 +93,7 @@
 
 <h2>Lista de cocineros</h2>
 <div class="container">
+  <h3 id="cargando" />
   {#each datos as cocinero}
     <Cocinero {cocinero}>
       <div style="text-align: left">
